@@ -6,4 +6,4 @@ O projeto deve funcionar como uma expecie de filho perdido do aplicativo Letterb
 
 Que a caso de duvida, foram jogados pelo criador do projeto, as opniões, SUPOSTAMENTE, serão verdadeiras.
 
-Qualquer descordancia, devera ser guardada para seu choro diario no banho, tambem guardarei os meus, grande abraço
+Qualquer descordancia, devera ser guardada para seu choro diario no banho, algo que deve ser comum no nosso cotidiano, grande abraço!
