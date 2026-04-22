@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Home.scss";
+
 
 function Home() {
     const [query, setQuery] = useState("");
@@ -16,23 +18,27 @@ function Home() {
 
     return (
         <div>
-            <h1>Prateleira de Jogos</h1>
-            <input
-                type="text"
-                value={query}
-                onChange={e => setQuery(e.target.value)}
-                placeholder="Buscar jogo..."
-            />
-            <button onClick={searchGames}>Pesquisar</button>
+            <div className="searchHome">
+                <span className="title">Prateleira de Jogos</span>
+                <div className="searchContainer">
+                    <input
+                    className="inputS"
+                        type="text"
+                        value={query}
+                        onChange={e => setQuery(e.target.value)}
+                        placeholder="Buscar jogo..."
+                    />
+                    <button className="buttonS" onClick={searchGames}>Pesquisar</button>
+                </div>
+                <Link to="/favorites" className="buttonLink">Ver Favoritos</Link>
 
-            <Link to="/favorites">Ver Favoritos</Link>
-
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
+            </div>
+            <div className="respContainer" style={{ display: "flex", flexWrap: "wrap" }}>
                 {games.map(game => (
-                    <div key={game.id} style={{ margin: "10px" }}>
-                        <img src={game.background_image} alt={game.name} width="200" />
-                        <h3>{game.name}</h3>
-                        <Link to={`/game/${game.id}`}>Ver mais</Link>
+                    <div className="respGame" key={game.id} >
+                        <img src={game.background_image} alt={game.name} />
+                        <span>{game.name}</span>
+                        <Link className="linkGame" to={`/game/${game.id}`}>Ver mais</Link>
                     </div>
                 ))}
             </div>
