@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import "./CardGame.scss"; // importa seu arquivo SCSS
 
 function CardGame({ image, title }) {
   const [favorite, setFavorite] = useState(false);
   const [rating, setRating] = useState(0);
 
   return (
-    <>
-    <div style={styles.card}>
+    <div className="card-game">
       {/* Estrela de favorito */}
-      <div style={styles.favorite} onClick={() => setFavorite(!favorite)}>
-        <FaStar color={favorite ? "gold" : "gray"} size={24} />
+      <div className="favorite" onClick={() => setFavorite(!favorite)}>
+        <FaStar color={favorite ? "gray" : "gold"} size={24} />
       </div>
 
       {/* Imagem do jogo */}
-      <img src={image} alt={title} style={styles.image} />
+      <img src={image} alt={title} className="image" />
 
       {/* Título */}
-      <h3>{title}</h3>
+      <h3 className="title">{title}</h3>
 
       {/* Botão de analisar */}
-      <button style={styles.button}>Analisar</button>
+      <button className="button">Analisar</button>
 
       {/* Avaliação com estrelas */}
-      <div style={styles.stars}>
+      <div className="stars">
         {[...Array(5)].map((_, i) => (
           <FaStar
             key={i}
@@ -35,10 +35,7 @@ function CardGame({ image, title }) {
         ))}
       </div>
     </div>
-    </>
   );
 }
-
-
 
 export default CardGame;
