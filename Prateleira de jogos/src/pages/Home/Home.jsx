@@ -7,6 +7,7 @@ function Home() {
     const [query, setQuery] = useState("");
     const [games, setGames] = useState([]);
 
+    
     const searchGames = () => {
         fetch(`https://api.rawg.io/api/games?key=9b83afe1d7784bdc9caecb835d3f0f8c&search=${query}`)
             .then(res => res.json())

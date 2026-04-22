@@ -8,21 +8,17 @@ function CardGame({ image, title }) {
 
   return (
     <div className="card-game">
-      {/* Estrela de favorito */}
+
       <div className="favorite" onClick={() => setFavorite(!favorite)}>
         <FaStar color={favorite ? "gray" : "gold"} size={24} />
       </div>
 
-      {/* Imagem do jogo */}
       <img src={image} alt={title} className="image" />
 
-      {/* Título */}
       <h3 className="title">{title}</h3>
 
-      {/* Botão de analisar */}
       <button className="button">Analisar</button>
 
-      {/* Avaliação com estrelas */}
       <div className="stars">
         {[...Array(5)].map((_, i) => (
           <FaStar
