@@ -20,7 +20,7 @@ function Home() {
     return (
         <div>
             <div className="searchHome">
-                <span className="title">Prateleira de Jogos</span>
+                <span className="titlePrincipal">Prateleira de Jogos</span>
                 <div className="searchContainer">
                     <input
                     className="inputS"

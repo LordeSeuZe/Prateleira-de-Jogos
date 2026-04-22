@@ -22,13 +22,14 @@ function Favorites() {
           {favorites.map(game => (
             <CardGame
               key={game.id} 
+              id={game.id}
               image={game.background_image} 
               title={game.name} 
             />
           ))}
         </div>
       )}
-      <button onClick={homePage}>Página Inicial</button>
+      <button className="button" onClick={homePage}>Página Inicial</button>
     </div>
   );
 }
