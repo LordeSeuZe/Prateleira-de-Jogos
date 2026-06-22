@@ -1,146 +1,113 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
 # 🎮 Prateleira de Jogos
 
-## 📌 5.1 Identificação
+## 📌 Identificação
 
-**Nome do projeto:**
-Prateleira de Jogos
+**Nome do Projeto:** Prateleira de Jogos
 
 **Descrição:**
-A Prateleira de Jogos é uma aplicação web desenvolvida com foco na organização e visualização de jogos digitais. O sistema permite listar jogos, visualizar detalhes individuais e gerenciar uma lista de favoritos utilizando armazenamento local do navegador (*localStorage*).
+A Prateleira de Jogos é uma aplicação web desenvolvida em React, focada na organização e visualização de jogos digitais. O sistema permite aos usuários listar jogos, visualizar detalhes individuais e gerenciar uma lista de favoritos, utilizando o armazenamento local do navegador (localStorage) para persistência. Além disso, o projeto integra a API RAWG para realizar buscas de jogos em tempo real, proporcionando uma experiência de navegação moderna e interativa.
 
-O projeto tem como objetivo praticar conceitos de desenvolvimento front-end moderno, incluindo componentização, roteamento e persistência de dados no cliente.
+## ⚙️ Funcionalidades
 
----
+As principais funcionalidades da aplicação incluem:
 
-## ⚙️ 5.2 Funcionalidades
+*   **Listagem de jogos:** Exibição de uma coleção de jogos na página inicial.
+*   **Visualização de detalhes:** Acesso a informações detalhadas de cada jogo.
+*   **Gerenciamento de favoritos:** Funcionalidades para adicionar e remover jogos da lista de favoritos.
+*   **Persistência de dados:** Utilização do `localStorage` para manter a lista de favoritos salva entre as sessões do navegador.
+*   **Navegação:** Implementação de rotas dinâmicas para uma navegação fluida entre as páginas.
+*   **Busca de jogos:** Integração com a API RAWG para pesquisa de jogos em tempo real.
+*   **Responsividade:** Estrutura preparada para adaptação a diferentes tamanhos de tela.
 
-* 📋 Listagem de jogos na página inicial
-* 🔎 Visualização de detalhes de um jogo específico
-* ⭐ Adição de jogos à lista de favoritos
-* ❌ Remoção de jogos dos favoritos
-* 💾 Persistência dos favoritos utilizando **localStorage**
-* 🔄 Navegação entre páginas utilizando rotas dinâmicas
-* 📱 Estrutura preparada para responsividade
+## 🛠️ Tecnologias Utilizadas
 
----
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-## 🛠️ 5.3 Tecnologias Utilizadas
+*   **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+*   **React Router DOM:** Gerenciamento de rotas na aplicação React.
+*   **JavaScript ES6+:** Linguagem de programação para a lógica da aplicação.
+*   **SCSS/Sass:** Pré-processador CSS para estilização dos componentes.
+*   **Vite:** Ferramenta de build e desenvolvimento rápido.
+*   **RAWG API:** Fonte de dados para a busca e exibição de informações sobre jogos.
 
-* **React** – Biblioteca principal para construção da interface
-* **React Router DOM** – Gerenciamento de rotas da aplicação
-* **JavaScript (ES6+)** – Lógica da aplicação
-* **CSS / SCSS (Sass)** – Estilização dos componentes
-* **Vite (ou bundler equivalente)** – Ferramenta de build e desenvolvimento
+## ▶️ Instruções de Execução
 
----
+Para configurar e executar o projeto localmente, siga os passos abaixo:
 
-## ▶️ 5.4 Instruções de Execução
+1.  **Clone o repositório:**
+    ```bash
+    git clone <url-do-repositorio>
+    ```
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd Prateleira-de-Jogos
+    ```
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+4.  **Execute o projeto:**
+    ```bash
+    npm run dev
+    ```
+5.  **Acesse no navegador:**
+    A aplicação estará disponível em `http://localhost:5173`.
 
-Siga os passos abaixo para rodar o projeto localmente:
+    **Observação:** Caso a porta `5173` esteja ocupada, o Vite pode iniciar em outra porta (ex: `4000`). Para fixar a porta, configure o arquivo `vite.config.js` adicionando o seguinte trecho:
+    ```javascript
+    server: {
+      port: 5173,
+      strictPort: true
+    }
+    ```
 
-### 1. Clone o repositório
+## 🗂️ Estrutura do Projeto
 
-```bash
-git clone <url-do-repositorio>
-```
-
-### 2. Acesse a pasta do projeto
-
-```bash
-cd Prateleira-de-Jogos
-```
-
-### 3. Instale as dependências
-
-```bash
-npm install
-```
-
-### 4. Execute o projeto
-
-```bash
-npm run dev
-```
-
-### 5. Acesse no navegador
-
-```bash
-http://localhost:5173
-```
-
----
-
-## 🗂️ 5.5 Estrutura do Projeto
+A estrutura de diretórios do projeto é organizada da seguinte forma:
 
 ```
 Prateleira-de-Jogos/
 │
 ├── src/
-│   ├── pages/
+│   ├── pages/             # Páginas principais da aplicação (Home, GamePage, Favorites)
 │   │   ├── Home/
 │   │   ├── GamePage/
 │   │   └── Favorites/
 │   │
-│   ├── components/
-│   │   └── (componentes reutilizáveis)
+│   ├── components/        # Componentes reutilizáveis (Button, CardGame, FavoriteIcon, Loader)
+│   │   ├── Button/
+│   │   ├── CardGame/
+│   │   ├── FavoriteIcon/
+│   │   └── Loader/
 │   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── App.css
-│   └── index.css
+│   ├── services/          # Funções auxiliares (ex: gerenciamento de favoritos com localStorage)
+│   │   └── favorites.js
+│   │
+│   ├── App.jsx            # Configuração das rotas da aplicação
+│   ├── main.jsx           # Ponto de entrada do React
+│   └── index.css          # Estilos globais
 │
-├── public/
-├── package.json
-└── README.md
+├── public/                # Arquivos estáticos
+├── package.json           # Metadados e dependências do projeto
+└── README.md              # Documentação do projeto
 ```
-
-**Descrição da estrutura:**
-
-* `pages/` → Contém as páginas principais da aplicação
-* `components/` → Componentes reutilizáveis (caso existam)
-* `App.jsx` → Configuração das rotas da aplicação
-* `main.jsx` → Ponto de entrada do React
-* `styles` → Arquivos de estilização
-
----
 
 ## 🚀 Considerações Finais
 
-Este projeto demonstra a aplicação de conceitos importantes do desenvolvimento front-end, como:
+Este projeto serve como uma demonstração de conceitos importantes no desenvolvimento front-end moderno, incluindo:
 
-* Organização de código em componentes
-* Navegação com rotas dinâmicas
-* Manipulação de estado com React
-* Persistência de dados no navegador
+*   Organização em componentes reutilizáveis.
+*   Navegação com rotas dinâmicas.
+*   Manipulação de estado com React.
+*   Persistência de dados no navegador.
+*   Integração com API externa (RAWG).
 
-Além disso, serve como base para evoluções futuras, como:
+### Possíveis Evoluções Futuras:
 
-* Integração com APIs externas
-* Sistema de busca e filtros
-* Autenticação de usuários
-* Deploy em produção
-
----
+*   **Filtros avançados de busca:** Implementação de opções de filtragem mais robustas para a pesquisa de jogos.
+*   **Autenticação de usuários:** Adição de um sistema de login e registro para personalização da experiência.
+*   **Deploy em produção:** Publicação da aplicação em plataformas como GitHub Pages ou Vercel.
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Rafael C. Barros**
->>>>>>> 6473b9de81a8e0c16d9a017045f5114451dcd86d
+Desenvolvido por Rafael C. Barros
