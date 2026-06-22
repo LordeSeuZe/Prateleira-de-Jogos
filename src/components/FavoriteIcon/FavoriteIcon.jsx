@@ -1,5 +1,5 @@
-import React from "react";
 import { FaStar } from "react-icons/fa";
+import React from "react";
 import "./FavoriteIcon.scss";
 
 function FavoriteIcon({ active, onClick }) {
